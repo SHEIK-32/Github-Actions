@@ -1,0 +1,13 @@
+name: Docker ci pipeline
+run-name: ${{github.actor }} is running
+on: [push]
+jobs:
+   docker-ci-pipeline:
+      runs-on: ubuntu-latest
+      steps:
+         - name: learning commands
+           run: echo "docker cli commands"
+
+         - name: Documentation
+           run: echo "Documentation in Github wiki"
+           
