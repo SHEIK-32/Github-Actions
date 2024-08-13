@@ -5,9 +5,15 @@ jobs:
    docker-ci-pipeline:
       runs-on: ubuntu-latest
       steps:
-         - name: learning commands
-           run: echo "docker cli commands"
+         - name: Docker build
+           run: docker build -t ${{secrets.username}}/flask-hello-world .
 
-         - name: Documentation
+         - name: Checkout Repository
+           uses: actions/checkout@v4
+
+         - name: Docker push
+           run: echo "Documentation in Github wiki"
+
+         - name: Docker push
            run: echo "Documentation in Github wiki"
            
